@@ -27,11 +27,7 @@ fn posn(pos: usize, end: usize, xstart: f64, xend: f64) -> f64 {
 #[test]
 fn test_posn() {
     let approx = |x0: f64, x: f64| (x - x0).abs() < 0.001;
-    let tests = &[
-        (0, 1.0f64),
-        (80, 2.0),
-        (40, 1.5),
-    ];
+    let tests = &[(0, 1.0f64), (80, 2.0), (40, 1.5)];
     for (pos, out) in tests {
         assert!(approx(posn(*pos, 80, 1.0, 2.0), *out));
     }
@@ -46,10 +42,7 @@ fn test_posn_flipped() {
 /// Render the image.
 fn main() {
     // XXX Hardwire everything for now.
-    let ((left, top), (right, bottom)) = (
-        (-1.0, 0.0),
-        (0.0, 1.0),
-    );
+    let ((left, top), (right, bottom)) = ((-1.0, 0.0), (0.0, 1.0));
     let (width, height) = (320, 240);
     let escape = 255;
 
