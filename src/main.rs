@@ -43,7 +43,7 @@ fn test_posn_flipped() {
 fn main() {
     // XXX Hardwire everything for now.
     let ((left, top), (right, bottom)) = ((-1.0, 0.0), (0.0, 1.0));
-    let (width, height) = (320, 240);
+    let (width, height) = (640, 480);
     let escape = 255;
 
     // http://netpbm.sourceforge.net/doc/pgm.html
